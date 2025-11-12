@@ -1,1 +1,30 @@
-<h1>欢迎来到我的主页</h1>
+---
+layout: default
+title: Lily's Homepage
+---
+
+<header>
+  <h1>Hi, I'm Lily</h1>
+  <p>Graduate researcher in multimodal AI.</p>
+</header>
+
+<main>
+  <section>
+    <h2>Recent Posts</h2>
+    <ul>
+      {% for post in site.posts limit:5 %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+          <time datetime="{{ post.date | date_to_xmlschema }}">
+            {{ post.date | date: "%Y-%m-%d" }}
+          </time>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <!-- 你的项目卡片 -->
+  </section>
+</main>
