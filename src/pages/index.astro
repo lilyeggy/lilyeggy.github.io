@@ -3,51 +3,57 @@ import Layout from '../layouts/Layout.astro';
 ---
 <Layout>
   <main>
-    <section class="hero">
-      <div class="eyebrow">Personal engineering log · 2025</div>
-      <h1>你好，我是 <em>lilyeggy</em>。</h1>
-      <p>我喜欢把复杂的问题拆开，做成可以运行、可以验证、也可以被别人看懂的东西。这里记录正在进行的项目和一路上的小进步。</p>
-      <div class="hero-meta"><span class="status">currently building</span><span class="meta-divider"></span><span>agent infrastructure · systems · learning</span></div>
+    <section class="hero-panel">
+      <div class="hero-content">
+        <div class="hero-top">
+          <div class="eyebrow">personal workspace / 2025</div>
+          <div class="availability">open to ideas</div>
+        </div>
+        <h1>你好，我是<br /><em>lilyeggy</em>。</h1>
+        <p>我喜欢把复杂的问题拆开，做成可以运行、可以验证、也可以被别人看懂的东西。这里是我的项目、实验和每日进度。</p>
+        <div class="hero-actions"><a class="hero-button" href="#projects">查看我的项目 ↓</a><a class="hero-button secondary" href="https://github.com/lilyeggy" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+      </div>
+      <div class="hero-footer"><span>agent infrastructure</span><span>systems &amp; tools</span><span>learning in public</span></div>
     </section>
 
     <section id="projects" class="section-heading">
       <span class="section-number">01</span><h2>PROJECTS</h2><span class="section-rule"></span><span class="section-note">things I am building</span>
     </section>
-
-    <section class="project-grid">
-      <a class="project-card featured" href="/projects/vram-aware-harness">
+    <section class="card-grid">
+      <a class="card featured" href="/projects/vram-aware-harness">
         <div class="card-top"><span class="card-icon">⌘</span><span class="card-status">● active / core project</span><span class="card-index">01</span></div>
-        <h3>VRAM-Aware <span>Agent Harness</span></h3>
-        <p>一个支持团队共享本地大模型的多租户 Agent 任务服务。把可靠执行、GPU 调度、工具治理和真实隔离放进同一个用户闭环。</p>
-        <div class="card-bottom"><div class="tech-list"><span>TypeScript</span><span>Pi</span><span>vLLM</span><span>SQLite</span></div><span class="card-link">open project →</span></div>
+        <h3>VRAM-Aware<br /><span>Agent Harness</span></h3>
+        <p>支持团队共享本地大模型的多租户 Agent 任务服务。把可靠执行、GPU 调度、工具治理和真实隔离放进同一个用户闭环。</p>
+        <div class="card-bottom"><div class="tech-list"><span>TypeScript</span><span>Pi</span><span>vLLM</span></div><span class="card-link">详情 →</span></div>
       </a>
 
-      <a class="project-card" href="https://github.com/lilyeggy/VRAM-Aware-Harness/tree/main/agentic-rl-rollout-explorer" target="_blank" rel="noreferrer">
+      <a class="card" href="https://github.com/lilyeggy/VRAM-Aware-Harness/tree/main/agentic-rl-rollout-explorer" target="_blank" rel="noreferrer">
         <div class="card-top"><span class="card-icon">↗</span><span class="card-status">exploring</span><span class="card-index">02</span></div>
         <h3>Agentic RL<br /><span>Rollout Explorer</span></h3>
         <p>围绕 Agent rollout 的实验性探索，记录从执行过程到结果分析的思路和实现。</p>
-        <div class="card-bottom"><div class="tech-list"><span>React</span><span>Next.js</span><span>Drizzle</span></div><span class="card-link">source ↗</span></div>
+        <div class="card-bottom"><div class="tech-list"><span>React</span><span>Next.js</span></div><span class="card-link">源码 ↗</span></div>
       </a>
 
-      <a class="project-card" href="https://github.com/lilyeggy/VRAM-Aware-Harness/tree/main/ax-code-atlas" target="_blank" rel="noreferrer">
+      <a class="card" href="https://github.com/lilyeggy/VRAM-Aware-Harness/tree/main/ax-code-atlas" target="_blank" rel="noreferrer">
         <div class="card-top"><span class="card-icon">#</span><span class="card-status">in progress</span><span class="card-index">03</span></div>
         <h3>AX Code<br /><span>Atlas</span></h3>
-        <p>用地图和可视化的方式整理代码、架构与关键路径，让大型工程更容易被理解和继续推进。</p>
-        <div class="card-bottom"><div class="tech-list"><span>Code map</span><span>Atlas</span><span>Web</span></div><span class="card-link">source ↗</span></div>
+        <p>用地图和可视化整理代码、架构与关键路径，让大型工程更容易被理解和继续推进。</p>
+        <div class="card-bottom"><div class="tech-list"><span>Code map</span><span>Web</span></div><span class="card-link">源码 ↗</span></div>
       </a>
 
-      <a class="project-card" href="https://github.com/lilyeggy/VRAM-Aware-Harness/tree/main/project-roadmap-atlas" target="_blank" rel="noreferrer">
+      <a class="card" href="https://github.com/lilyeggy/VRAM-Aware-Harness/tree/main/project-roadmap-atlas" target="_blank" rel="noreferrer">
         <div class="card-top"><span class="card-icon">↯</span><span class="card-status">planning</span><span class="card-index">04</span></div>
         <h3>Project<br /><span>Roadmap Atlas</span></h3>
-        <p>多租户 Agent 任务服务的阶段技术地图，追踪交付物、完成证据、架构边界和下一步路线。</p>
-        <div class="card-bottom"><div class="tech-list"><span>Roadmap</span><span>Docs</span><span>Atlas</span></div><span class="card-link">source ↗</span></div>
+        <p>追踪交付物、完成证据、架构边界和下一阶段路线的项目技术地图。</p>
+        <div class="card-bottom"><div class="tech-list"><span>Roadmap</span><span>Docs</span></div><span class="card-link">源码 ↗</span></div>
       </a>
 
-      <a class="project-card" href="https://github.com/lilyeggy/VRAM-Aware-Harness/tree/main/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E5%AE%9E%E9%AA%8C" target="_blank" rel="noreferrer">
-        <div class="card-top"><span class="card-icon">⌁</span><span class="card-status">learning lab</span><span class="card-index">05</span></div>
-        <h3>计算机基础<br /><span>实验场</span></h3>
-        <p>从进程、pipe、async、socket 到 container，用真实的 Agent Infra 问题补齐系统基础。</p>
-        <div class="card-bottom"><div class="tech-list"><span>Python</span><span>Linux</span><span>Docker</span></div><span class="card-link">source ↗</span></div>
+      <a class="card daily-card" href="#activity">
+        <div class="card-top"><span class="card-icon">✦</span><span class="card-status">daily notes</span><span class="card-index">05</span></div>
+        <h3>每日<br /><span>进度</span></h3>
+        <p>记录今天做了什么、遇到什么问题，以及下一步准备验证什么。</p>
+        <ul class="log-list"><li><time>09.01</time><span>网站视觉重新设计</span></li><li><time>next</time><span>加入真正的日志系统</span></li></ul>
+        <div class="card-bottom"><span></span><span class="card-link">持续更新 →</span></div>
       </a>
     </section>
 
