@@ -4,21 +4,26 @@ import Layout from '../layouts/Layout.astro';
 <Layout>
   <main>
     <section class="hero">
-      <div class="eyebrow">Projects · Progress · Notes</div>
+      <div class="eyebrow">Personal engineering log · v0.1</div>
       <h1>你好，我是 lilyeggy。</h1>
-      <p>这是我的个人空间，用来记录正在做的项目、每天的修改，以及一路上的思考和进步。</p>
+      <p>我在这里记录项目、实验和每天的进步。这里不是一份静态简历，而是一个持续更新的工程现场。</p>
+      <div class="terminal-line"><span>lilyeggy@localhost:~$</span> cat now.txt</div>
+      <div class="now"><span class="pulse"></span><strong>现在正在做：</strong> 让 Agent 在真实项目里更可靠地工作。</div>
     </section>
+    <section class="section-head"><span class="eyebrow">01 / selected work</span><span class="line"></span></section>
     <section class="grid">
       <a class="card" href="/projects/vram-aware-harness">
-        <span class="tag">进行中 · 核心项目</span>
+        <span class="tag">● ACTIVE / CORE PROJECT</span>
         <h2>VRAM-Aware Agent Harness</h2>
-        <p>一个支持团队共享本地大模型的多租户 Agent 任务服务，关注可靠执行、GPU 调度、工具治理与真实隔离。</p>
+        <p>支持团队共享本地大模型的多租户 Agent 任务服务，关注可靠执行、GPU 调度、工具治理与真实隔离。</p>
+        <div class="stack"><span>TypeScript</span><span>Pi</span><span>vLLM</span><span>SQLite</span></div>
         <span class="arrow">查看项目 →</span>
       </a>
       <article class="card">
-        <span class="tag">Daily log</span>
+        <span class="tag">// DAILY LOG</span>
         <h2>每日进度</h2>
-        <p>这里会持续加入开发日志：今天做了什么、遇到什么问题、下一步准备验证什么。</p>
+        <p>今天做了什么、遇到什么问题、下一步准备验证什么。把过程留下来，方便未来的自己回看。</p>
+        <div class="log-preview"><span>2025.09.01</span> 网站视觉升级<br /><span>next</span> 加入更多项目日志</div>
         <span class="arrow">即将更新 →</span>
       </article>
       <article class="card contributions">
