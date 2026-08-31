@@ -1,0 +1,24 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout title="VRAM-Aware Agent Harness · lilyeggy's web">
+  <main class="prose">
+    <div class="eyebrow">Project / 01</div>
+    <h1>VRAM-Aware Agent Harness</h1>
+    <p><strong>一个支持团队共享本地大模型的多租户 Agent 任务服务。</strong></p>
+    <p>用户可以在独立 Workspace 中提交 Agent 任务、观察执行过程，并获得最终回答、文件 Diff 和 Artifact。系统负责可信身份、租户隔离、公平调度共享 GPU、工具权限治理，以及故障后的安全恢复。</p>
+    <h2>我在解决什么问题？</h2>
+    <p>多个用户把真实项目交给 Agent 时，不能互相读取代码和 Secret；共享 GPU 时不能让任务永久饥饿；任务失败后也不能重复执行危险的外部副作用。最终交付必须是可使用的修改结果，而不只是数据库里的一个终态。</p>
+    <h2>核心方向</h2>
+    <ul>
+      <li><strong>可靠执行：</strong>状态机、事件、幂等与 Checkpoint，支持安全恢复。</li>
+      <li><strong>资源感知：</strong>结合 vLLM Metrics、GPU 状态和并发 slot 做准入与背压。</li>
+      <li><strong>多租户公平调度：</strong>Tenant 内 FIFO、Tenant 间 round-robin，避免单一用户长期占用资源。</li>
+      <li><strong>工具治理与隔离：</strong>落实 Workspace、文件、进程、网络和 Secret 的执行边界。</li>
+      <li><strong>结果闭环：</strong>交付最终回答、文件 Diff、测试结果和必要 Artifact。</li>
+    </ul>
+    <h2>当前状态</h2>
+    <p>Day 1–7 MVP 已完成单进程 + SQLite 的核心纵向切片，包含 Pi Run、副作用恢复、GPU 准入、公平队列和自动续跑。当前主线聚焦可信身份、Tenant Workspace、真实 Sandbox、任务结果与最小用户界面。</p>
+    <p><a href="https://github.com/lilyeggy/VRAM-Aware-Harness" target="_blank">在 GitHub 查看源码 →</a></p>
+  </main>
+</Layout>
